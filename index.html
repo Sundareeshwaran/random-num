@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind CSS | Random Number Generator</title>
+  <link rel="stylesheet" href="output.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" />
+  <link rel="shortcut icon" href="https://logowik.com/content/uploads/images/tailwind-css3232.logowik.com.webp" type="image/x-icon">
+</head>
+
+<body class="bg-gray-950">
+  <div class="card max-sm:w-full md:w-3/5 lg:w-1/2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+    <!-- component -->
+    <div class="main bg-slate-50 px-10 py-5 grid place-content-center gap-20 rounded-lg shadow-md shadow-slate-200 text-2xl">
+      <button class="rounded border-2 border-gray-800 px-2 py-1" id="btn">
+        <i class="ri-bubble-chart-line mr-1"></i>Click Me!
+      </button>
+      <div id="num" class="text-center text-9xl">0</div>
+    </div>
+  </div>
+
+  <script>
+    const num = document.getElementById("num");
+    const btn = document.getElementById("btn");
+
+    btn.addEventListener("click", () => {
+      let p = (num.textContent = Math.floor(Math.random() * 100) + 1);
+      console.log(p);
+    });
+  </script>
+</body>
+
+</html>
